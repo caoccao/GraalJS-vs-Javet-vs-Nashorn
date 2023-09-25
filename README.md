@@ -36,6 +36,8 @@ The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthen
 | 9         | 46               | 43                   | 170                  | 35    |
 | 10        | 48               | 46                   | 171                  | 35    |
 
+![Performance comparison with warmup on Windows](https://miro.medium.com/v2/resize:fit:960/format:webp/1*Sw2pd1wvo-en4hgKF8P0Sg.png)
+
 ### Windows without Warmup
 
 | Iteration | GraalJS Polyglot | GraalJS ScriptEngine | Nashorn ScriptEngine | Javet |
@@ -50,6 +52,8 @@ The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthen
 | 8         | 46               | 42                   | 175                  | 36    |
 | 9         | 43               | 45                   | 173                  | 37    |
 | 10        | 49               | 49                   | 174                  | 35    |
+
+![Performance comparison without warmup on Windows](https://miro.medium.com/v2/resize:fit:960/format:webp/1*4tUFO3w5kijc8AUYcVSttA.png)
 
 ### MacOS
 
@@ -73,6 +77,8 @@ The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthen
 | 9         | 82               | 75                   | 784                  | 30    |
 | 10        | 82               | 61                   | 775                  | 32    |
 
+![Performance comparison with warmup on MacOS](https://miro.medium.com/v2/resize:fit:960/format:webp/1*xbzQhJ8qtUApsta03XHnJA.png)
+
 ### MacOS without Warmup
 
 | Iteration | GraalJS Polyglot | GraalJS ScriptEngine | Nashorn ScriptEngine | Javet |
@@ -87,6 +93,12 @@ The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthen
 | 8         | 87               | 81                   | 778                  | 32    |
 | 9         | 87               | 67                   | 795                  | 32    |
 | 10        | 92               | 72                   | 783                  | 32    |
+
+![Performance comparison without warmup on MacOS](https://miro.medium.com/v2/resize:fit:960/format:webp/1*ZFiFNYaHzX09AH6iLHaK3g.png)
+
+### Throughput
+
+![Throughput comparison](https://miro.medium.com/v2/resize:fit:960/format:webp/1*C8pRTGOv4sJGOEHkfRxMVQ.png)
 
 ## Conclusion
 
