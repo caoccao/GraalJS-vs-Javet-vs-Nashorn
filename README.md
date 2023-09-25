@@ -1,4 +1,4 @@
-# GraalJS-vs-Javet-vs-Nashorn
+# GraalJS vs. Javet vs. Nashorn
 
 A simple performance comparison of [GraalJS](https://github.com/oracle/graaljs), [Javet](https://github.com/caoccao/Javet) and Nashorn.
 
@@ -6,11 +6,11 @@ A simple performance comparison of [GraalJS](https://github.com/oracle/graaljs),
 
 [Javet](https://github.com/caoccao/Javet) is Java + V8 (JAVa + V + EighT). It is an awesome way of embedding Node.js and V8 in Java.
 
-Many potential [Javet](https://github.com/caoccao/Javet) users evaluate [Javet](https://github.com/caoccao/Javet) and GraalJS across many aspects. To save time for these users, I present a simple performance comparison of [GraalJS](https://github.com/oracle/graaljs), [Javet](https://github.com/caoccao/Javet) and Nashorn.
+Many potential [Javet](https://github.com/caoccao/Javet) users evaluate [Javet](https://github.com/caoccao/Javet) and [GraalJS](https://github.com/oracle/graaljs), across many aspects. To save time for these users, I present a simple performance comparison of [GraalJS](https://github.com/oracle/graaljs), [Javet](https://github.com/caoccao/Javet) and Nashorn.
 
-So I created this project based on [graal-js-jdk11-maven-demo](https://github.com/graalvm/graal-js-jdk11-maven-demo) which is a simple maven project that demonstrates how it's possible to run Graal.js on a stock JDK11. I enhanced it by adding Javet benchmark.
+I created this project based on [graal-js-jdk11-maven-demo](https://github.com/graalvm/graal-js-jdk11-maven-demo) which is a simple maven project that demonstrates how it's possible to run Graal.js on a stock JDK11. I enhanced it by adding Javet benchmark.
 
-The test JS code snippet is a simple implementation of [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which is an ancient algorithm for finding all prime numbers up to any given limit.
+The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthenes](https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes) which is an ancient algorithm for finding all prime numbers up to any given limit.
 
 ## Performance Comparison
 
@@ -90,7 +90,11 @@ The test JS code snippet is a simple implementation of [Sieve of Eratosthenes](h
 
 ## Conclusion
 
-TODO
+- GraalJS is ~10x slower than Javet is in the first round of the script execution.
+- GraalJS is ~1.3x slower on Windows and ~2.5x slower on MacOS than Javet is with enough rounds of the warmup.
+- Nashorn is ~5x slower on Windows and 20+x slower on MacOS than Javet is regardless of the warmup.
+- In ad-hoc script execution scenarios, Gaming (e.g. Minecraft), PaaS + SaaS (e.g. Low code, no code), Time Critical (e.g. MQTT), etc., GraalJS is ~10x slower than Javet is. That makes Javet the de facto scripting engine on JVM.
+- If the scripts are well warmed up, GraalJS performs not too bad and is acceptable. However, it's quite tricky to give even warmup chances to all the branches of the scripts. In practice, the cold branches slow down the execution so that the actual performance improvement from JIT is not that significant. Javet is still a much better solution.
 
 ## Benchmark
 
