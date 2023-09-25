@@ -19,7 +19,7 @@ The test JS code snippet is a simple implementation of [Sieve of Eratosthenes](h
 - CPU: AMD 5950X
 - RAM: 128GB
 - OS: Windows 10
-- JDK: corretto-11.0.10
+- JDK: Corretto-11.0.10
 
 ### Windows with Warmup
 
@@ -53,7 +53,40 @@ The test JS code snippet is a simple implementation of [Sieve of Eratosthenes](h
 
 ### MacOS
 
-TODO
+- CPU: M2 Max
+- RAM: 64GB
+- OS: Ventura 13.5.2
+- JDK: Corretto-11.0.19.7.1
+
+### MacOS with Warmup
+
+| Iteration | GraalJS Polyglot | GraalJS ScriptEngine | Nashorn ScriptEngine | Javet |
+|-----------|------------------|----------------------|----------------------|-------|
+| 1         | 84               | 63                   | 778                  | 32    |
+| 2         | 84               | 70                   | 789                  | 31    |
+| 3         | 82               | 60                   | 778                  | 33    |
+| 4         | 85               | 73                   | 779                  | 34    |
+| 5         | 84               | 60                   | 776                  | 31    |
+| 6         | 84               | 63                   | 780                  | 31    |
+| 7         | 82               | 73                   | 780                  | 31    |
+| 8         | 82               | 61                   | 773                  | 30    |
+| 9         | 82               | 75                   | 784                  | 30    |
+| 10        | 82               | 61                   | 775                  | 32    |
+
+### MacOS without Warmup
+
+| Iteration | GraalJS Polyglot | GraalJS ScriptEngine | Nashorn ScriptEngine | Javet |
+|-----------|------------------|----------------------|----------------------|-------|
+| 1         | **329**          | **101**              | **862**              | **39**|
+| 2         | **117**          | 90                   | 788                  | 28    |
+| 3         | 88               | 95                   | 774                  | 31    |
+| 4         | 83               | 75                   | 794                  | 33    |
+| 5         | 92               | 76                   | 778                  | 31    |
+| 6         | 82               | 78                   | 772                  | 38    |
+| 7         | 85               | 80                   | 785                  | 31    |
+| 8         | 87               | 81                   | 778                  | 32    |
+| 9         | 87               | 67                   | 795                  | 32    |
+| 10        | 92               | 72                   | 783                  | 32    |
 
 ## Conclusion
 

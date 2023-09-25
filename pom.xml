@@ -19,7 +19,6 @@
             <id>windows</id>
             <activation>
                 <os>
-                    <name>Windows</name>
                     <family>windows</family>
                     <arch>x86</arch>
                 </os>
@@ -36,7 +35,6 @@
             <id>macos</id>
             <activation>
                 <os>
-                    <name>MacOS</name>
                     <family>mac</family>
                 </os>
             </activation>
