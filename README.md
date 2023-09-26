@@ -18,8 +18,8 @@ The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthen
 
 - CPU: AMD 5950X
 - RAM: 128GB
-- OS: Windows 10
-- JDK: Corretto-11.0.10
+- OS: Windows 10 22H2
+- JDK: Corretto-11.0.10.9.1
 
 ### Windows with Warmup
 
