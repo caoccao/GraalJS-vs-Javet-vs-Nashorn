@@ -14,12 +14,20 @@ The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthen
 
 ## Performance Comparison
 
-### Windows
+### Environment
 
-- CPU: AMD 5950X
-- RAM: 128GB
-- OS: Windows 10 22H2
-- JDK: Corretto-11.0.10.9.1
+- Javet v2.2.3 (V8 v11.7)
+- GraalJS v22.2.0
+- Windows
+  - CPU: AMD 5950X
+  - RAM: 128GB
+  - OS: Windows 10 22H2
+  - JDK: Corretto-11.0.10.9.1
+- MacOS
+  - CPU: M2 Max
+  - RAM: 64GB
+  - OS: Ventura 13.5.2
+  - JDK: Corretto-11.0.19.7.1
 
 ### Windows with Warmup
 
@@ -54,13 +62,6 @@ The JS benchmark code snippet is a simple implementation of [Sieve of Eratosthen
 | 10        | 49               | 49                   | 174                  | 35    |
 
 ![Performance comparison without warmup on Windows](https://miro.medium.com/v2/resize:fit:960/format:webp/1*4tUFO3w5kijc8AUYcVSttA.png)
-
-### MacOS
-
-- CPU: M2 Max
-- RAM: 64GB
-- OS: Ventura 13.5.2
-- JDK: Corretto-11.0.19.7.1
 
 ### MacOS with Warmup
 
